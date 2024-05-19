@@ -81,13 +81,12 @@ First, I created the CSR as SecPlusLLC,
 ```
 openssl req -newkey rsa:2048 -keyout SecPlusLLC_privatekey.pem -out SecPlusLLC.csr
 ```
-
-`openssl req` establishes the toolkit and a certificate request. `-newkey rsa:2048` generates the new request using RSA with 2048 bits. `-keyout SecPlusLLC_privatekey.pem` specifices output file for the new private key, and `-out SecPlusLLC.csr` writes the certificate request to the specified file.
-
 <details>
     <summary>Screen: Creating the CSR</summary>
         <img src="https://github.com/Jess-Rivera/Creating-and-Verifying-Digital-Signatures/blob/main/CRYPTOGRAPHY_create_CSR.PNG" />
 </details>
+
+`openssl req` establishes the toolkit and a certificate request. `-newkey rsa:2048` generates the new request using RSA with 2048 bits. `-keyout SecPlusLLC_privatekey.pem` specifices output file for the new private key, and `-out SecPlusLLC.csr` writes the certificate request to the specified file.
 
 The CSR was then sent to the CA, CertAuth,  for approval. As the CA, I created my own private key in a similar manner to creating Alice's private key in the first portion: `openssl genpkey -algorithm RSA -out CA_privatekey.pem`. Finally, the CA signs the certificate,
 ```
