@@ -111,5 +111,8 @@ The most difficult part of this lab was learning all the arguments required for 
 
 ## Reflection and Learning
 While I don't understand the underlying functionality of how OpenSSL works, using it as a tool to create signatures and verify origin and authenticity were pretty straightfoward. It bugs me in the back of my head to use a tool and not understand the underlying process like I would normally do for my job in the Nuclear Field. But in a nuclear plant, there is only a limited number of systems and they rarely change so it is feasible with enough time and practice to know every system broken down to the simplest part. In the technology field, new tools are created so rapidly and they have so many functions. I'm sure with enough time I could become an extremely proficient user in `openssl` like I would with a system in a plant, but to expect myself to be very proficient with the amount of tools available to me is an unrealistic expectation. 
+
 The second portion of the lab did make sense to me for creating a request and getting the approval back. But I am still wondering how to then verify the crt.
+
+
 Upon conducting research, I could use the `openssl verify` function and pass it the SecPlusLLC.crt file, `-CAfile SecPlusLLC.crt` and since CertAuth is the Trusted Authority, use `-trusted CA_cert.crt`. While I did not create it in this lab, a Trusted Authority would have created this and it would be in the Client CA ROOT list. Fantastic!
