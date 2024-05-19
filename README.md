@@ -33,6 +33,7 @@ openssl genpkey -algorithm RSA -out alice_privatekey.pem
     <summary>Screen: Creating a Private Key</summary>
         <img src="https://github.com/Jess-Rivera/Creating-and-Verifying-Digital-Signatures/blob/main/CRYPTOGRAPHY_create_private_key.PNG" />
 </details>
+
 Breaking down the command, `openssl` is the encrption toolkit being used. `genpkey` is the command to create a private key. The `-algorithm RSA` designates to use RSA key algorithm and `-out` specifies the output file name, PEM being the default format for openssl private encryption key.
 
 Then a public key is created, 
